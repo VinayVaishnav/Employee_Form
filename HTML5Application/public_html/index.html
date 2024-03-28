@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Employee Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container justify-content-sm-center align-items-sm-center ">
+
+            <div class="card p-2 m-2 py-5 mt-3 justify-content-sm-center align-items-sm-center" >
+
+                <h1 class="m-1 text-center font-weight-bold ">Employee Form </h1>
+                <hr class="mb-20 p-0">
+
+                <form action="" method="post">
+
+                    <div class="form-group mb-4 column d-flex justify-content-between">
+                        <label for="empId">Employee ID:</label>
+                        <input type="text" class="form-conrol m-2 ml-0" style="width:60%" id="empId" name="empId" tabindex="1" onchange="getEmp()" required>
+                    </div>
+
+                    <div class="form-group mb-4 column d-flex justify-content-between">
+                        <label for="empName">Employee Name:</label>
+                        <input type="text" class="form-conrol m-2 ml-0" style="width:60%" id="empName" name="empName" tabindex="2" required>
+                    </div>
+
+                    <div class="form-group mb-4 column d-flex justify-content-between">
+                        <label for="basic_salary">Basic Salary:</label>
+                        <input type="number" min="0" style="width:60%" class="form-conrol m-2 ml-0" tabindex="3" id="basic_salary" name="basic_salary" required>
+                    </div>
+
+                    <div class="form-group mb-4 column d-flex justify-content-between">
+                        <label for="hra">HRA(House Rent Allowance):</label>
+                        <input type="number" min="0" style="width:60%" class="form-conrol m-2 ml-0" id="hra" tabindex="4" name="hra" required>
+                    </div>
+
+                    <div class="form-group mb-4 column d-flex justify-content-between">
+                        <label for="da">DA (Dearness Allowance):</label>
+                        <input type="number" min="0" style="width:60%" class="form-conrol m-2 ml-0" tabindex="5" id="da" name="da" required>
+                    </div>
+
+                    <div class="form-group mb-4 column d-flex justify-content-between">
+                        <label for="deductions">Deductions:</label>
+                        <input type="number" min="0" style="width:60%" class="form-conrol m-2 ml-0" id="deductions" tabindex="6" name="deductions" required>
+                    </div>
+
+                    <div class="btn-group container-fluid" role="group" aria-label="Basic example">
+                        <input type="button" class="btn btn-primary m-2 p-2 " id="new" value="New"
+                               onclick="newEmployee()" disabled>
+                        
+                        <input type="button" class="btn btn-primary m-2 p-2 " id="empSave" value="Save"
+                               onclick="saveEmployee()" disabled>
+
+                        <input type="button" class="btn btn-primary m-2 p-2" id="change" value="Change"
+                               onclick="ChangeData()" disabled >
+                        
+                        <input type="button" class="btn btn-primary m-2 p-2 " id="edit" value="Edit"
+                               onclick="editData()" disabled>
+
+                        <input type="button" class="btn btn-primary m-2 p-2 danger" id="reset" value="Reset"
+                               onclick="resetForm()" disabled>
+                    </div>
+                    
+                    <div class="btn-group container-fluid" role="group" aria-label="Basic example">
+                        <input type="button" class="btn btn-primary m-2 p-2 " id="first" value="First"
+                               onclick="getFirst()" disabled>
+                        
+                        <input type="button" class="btn btn-primary m-2 p-2 " id="prev" value="Previous"
+                               onclick="getPrev()" disabled>
+
+                        <input type="button" class="btn btn-primary m-2 p-2" id="next" value="Next"
+                               onclick="getNext()" disabled >
+                        
+                        <input type="button" class="btn btn-primary m-2 p-2 " id="last" value="Last"
+                               onclick="getLast()" disabled>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
